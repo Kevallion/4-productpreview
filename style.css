@@ -1,0 +1,151 @@
+@font-face{
+font-family: "Montserrat";
+src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url(./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+p{
+    font-size: 14px;
+    line-height: 1.7em;
+    margin-bottom:2em;
+}
+
+h1{
+    font-family: "Fraunces";
+    line-height: 1em;
+    margin-bottom:1em ;
+}
+
+body{
+    background: #F3E9E3;
+    min-height: 100vh;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.left{
+    background: url(./images/image-product-desktop.jpg) center/cover ;
+    border-radius: 20px 0 0 20px;
+}
+.container{
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.right{
+    padding: 2.2em;
+    display: flex;
+    flex-direction: column;
+}
+.perfume{
+    text-transform: uppercase;
+    font-family: "Monserrat",sans-serif;
+    letter-spacing: 7px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom:1rem;
+}
+
+.price{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.priceNow{
+color: var(--darkCyan);
+font-family: "Fraunces";
+font-weight: 700;
+font-size: 2em;
+}
+
+.priceBefore{
+    position: absolute;
+    bottom: 10px;
+    text-decoration: line-through;
+    margin-left: 20px;
+}
+
+button{
+    display: inline-block;
+    background: var(--darkCyan);
+    place-self: center;
+    width: 100%;
+    padding:15px 10px;
+    cursor: pointer;
+    border:none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3 ease;
+
+}
+
+button:hover{
+    background: hsl(157, 35%, 16%);;
+}
+
+button a{
+    display: inline-block;
+    font-weight: 700;
+    margin-left: 12px;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 10px;
+}
+
+@media screen and (max-width:572px){
+
+      
+    .container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.2fr 2fr;
+    }
+
+    .left{
+        background: url(./images/image-product-mobile.jpg) center/cover;
+        border-radius: 20px 20px 0 0;
+        
+    }
+}
